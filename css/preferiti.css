@@ -1,0 +1,222 @@
+body {
+  background-color: rgb(111, 108, 116);
+  font-size: 16px;
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+}
+
+nav {
+  position: fixed;
+  left: 0;
+  right: 0;
+  height: 50px;
+  background-color: black;
+  z-index: 2;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#nome {
+  font-family: 'Roboto', sans-serif;
+  font-size: 2em;
+  color: white;
+  margin: 15px;
+}
+
+#links, .links_mobile {
+  list-style: none;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+#menu {
+  margin: auto 0;
+  display: none;
+  cursor: pointer;
+}
+
+#menu div {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 5px 15px;
+}
+
+.open .links_mobile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.links_mobile {
+  display: none;
+  position: absolute;
+  background-color: black;
+  top: 36px;
+  left: 0;
+  height: 100vh;
+  width: 92%;
+}
+
+.open .links_mobile li {
+  padding: 10px;
+}
+
+#links a, .links_mobile a {
+  margin: 10px;
+  text-decoration: none;
+}
+
+#links a, .links_mobile a, footer p {
+  font-family: 'Open Sans', sans-serif;
+  font-style: normal;
+  text-transform: uppercase;
+  color: white;
+}
+
+#links li a:hover, .links_mobile li a:hover {
+  color: rgb(233, 181, 10);
+}
+
+header {
+  color: white;
+  background-image: url("../images/recording_studio.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 500px;
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#overlay {
+  background-color: rgba(0, 0, 0, 0.3);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+}
+
+header h1 {
+  font-weight: normal;
+  text-align: center;
+  z-index: 1;
+}
+
+header h1 a {
+  font-size: 0.9em;
+}
+
+header h1 strong {
+  font-size: 3.75em;
+  letter-spacing: 3px;
+}
+
+section {
+  background-color: rgb(111, 108, 116);
+  margin: 80px 130px;
+}
+
+#preferiti {
+  background-color: rgb(233, 181, 10);
+  color: white;
+  text-align: center;
+}
+
+#preferiti h1 {
+  padding-top: 15px;
+}
+
+#preferiti-view {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#preferiti-view .song {
+  margin: 10px;
+  border: 1px solid black;
+  padding: 5px;
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.song p {
+  display: none;
+}
+
+.song a {
+  cursor: pointer;
+  margin-top: 3px;
+  font-size: 0.8rem;
+  border: 1px solid black;
+  background-color: white;
+  color: black;
+}
+
+.song a:hover {
+  color: rgb(233, 181, 10);
+  background-color: black;
+}
+
+footer {
+  padding: 20px;
+  background-color: black;
+  text-align: center;
+  font-size: 2em;
+}
+
+/* --- MEDIA VIEW --- */
+
+@media (max-width: 500px) {
+  body {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 500px) {
+	#nome {
+	  font-size: 1em;
+	}
+}
+
+@media (max-width: 500px) {
+  #links {
+    display: none;
+  }
+
+  #menu {
+    display: block;
+  }
+}
+
+@media (max-width: 500px) {
+  header {
+    height: 300px;
+    line-height: 1.2;
+  }
+}
+
+@media (max-width: 500px) {
+  header h1 strong {
+    font-size: 1.75em;
+    letter-spacing: 2px;
+  }
+}
+
+@media (max-width: 500px) {
+  section {
+    margin: 20px 30px;
+  }
+}

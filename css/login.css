@@ -1,0 +1,63 @@
+body {
+  background-color: darkgrey;
+  display: flex;
+  height: 100%;
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 15px;
+}
+
+section {
+  padding-bottom: 10px;
+  background-color: white;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: auto;
+}
+
+section h1 {
+  color: black;
+  font-weight: 900;
+  font-size: 30px;
+}
+
+section input {
+  width: 100%;
+  padding: 3px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+section form div {
+  margin: 5px 10px;
+}
+
+.errore {
+  font-size: 0.7em;
+  color: red;
+}
+
+.log_error {
+  color: red;
+  font-size: 0.8em;
+  padding: 2px;
+}
+
+#submit {
+  border: 0;
+  border-radius: 4px;
+  margin-top: 10px;
+  padding: 5px;
+  background-color: darkgray;
+  color: black;
+  font-weight: 700;
+  cursor: pointer;
+  text-align: center;
+}
+
+#submit:hover {
+  background-color: rgb(233, 181, 10);
+  color: white;
+}
