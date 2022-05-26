@@ -1,13 +1,13 @@
 function onSpotifyJson(json) {
   const songs = document.querySelector('#result-view');
   songs.innerHTML = '';
-  const ricerca = json.tracks.items;
+  const ricerca = json.tracks;
 
   for(let i in ricerca) {
     const track_data = ricerca[i];
-    const track = track_data.name;
-    const artist = track_data.artists[0].name;
-    const imm_album = track_data.album.images[1].url;
+    const track = track_data.titolo;
+    const artist = track_data.artista;
+    const imm_album = track_data.img.url;
     const song = document.createElement('div');
     song.classList.add('song');
     const img = document.createElement('img');
@@ -20,9 +20,16 @@ function onSpotifyJson(json) {
     artista.textContent = artist;
     id = document.createElement('p');
     id.textContent = track_data.id;
+
     const preferito = document.createElement('a');
-    preferito.innerText = "Agg. a preferiti";
-    preferito.addEventListener('click', addPreferito);
+    if(track_data.preferito == true) {
+      preferito.innerText = "Già nei preferiti";
+      preferito.classList.add('added');
+    } else {
+      preferito.innerText = "Agg. a preferiti";
+      preferito.addEventListener('click', addPreferito);
+    }
+    
     song.appendChild(img);
     song.appendChild(titolo);
     song.appendChild(artista);
@@ -33,8 +40,7 @@ function onSpotifyJson(json) {
 }
 
 function onJsonPref(json) {
-  console.log(json);
-
+  console.log("Aggiunto: "+ json.esito);
 }
 
 function onResponse(response) {
@@ -60,6 +66,9 @@ function addPreferito(event) {
   formData.append('artist', button.parentNode.querySelector('.artista').textContent);
 
   fetch("add_preferiti.php", {method: 'post', body: formData}).then(onResponse).then(onJsonPref);
+
+  button.parentNode.querySelector('a').innerText = "Aggiunto!"
+  button.parentNode.querySelector('a').classList.add('added');
 }
 
 function mobileMenu(menu) {

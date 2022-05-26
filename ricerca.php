@@ -57,7 +57,7 @@
         </form>
 
         <div id="result-view">
-        </div>
+          <div id="navigazione"></div>
       </div>
     </section>
 

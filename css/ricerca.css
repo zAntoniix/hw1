@@ -31,6 +31,7 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-around;
+  margin-right: 10px;
 }
 
 #menu {
@@ -112,10 +113,6 @@ header h1 {
   z-index: 1;
 }
 
-header h1 a {
-  font-size: 0.9em;
-}
-
 header h1 strong {
   font-size: 3.75em;
   letter-spacing: 3px;
@@ -178,6 +175,12 @@ section {
 .song a:hover {
   color: rgb(233, 181, 10);
   background-color: black;
+}
+
+.added {
+  color: rgb(233, 181, 10) !important;
+  background-color: black !important;
+  cursor: default !important
 }
 
 footer {
