@@ -113,10 +113,6 @@ header h1 {
   z-index: 1;
 }
 
-header h1 a {
-  font-size: 0.9em;
-}
-
 header h1 strong {
   font-size: 3.75em;
   letter-spacing: 3px;
