@@ -65,7 +65,7 @@ function addPreferito(event) {
   formData.append('title', button.parentNode.querySelector('.titolo').textContent);
   formData.append('artist', button.parentNode.querySelector('.artista').textContent);
 
-  fetch("add_preferiti.php", {method: 'post', body: formData}).then(onResponse).then(onJsonPref);7
+  fetch("add_preferiti.php", {method: 'post', body: formData}).then(onResponse).then(onJsonPref);
 
   button.parentNode.querySelector('a').innerText = "Aggiunto!"
   button.parentNode.querySelector('a').classList.add('added');

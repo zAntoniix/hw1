@@ -1,12 +1,3 @@
-const campi = {
-  nome: false,
-  cognome: false,
-  username: false,
-  email: false,
-  password: false,
-  c_password: false
-}
-
 function controllaCampi(event) {
   if((nome.value.length === 0) || (cognome.value.length === 0) || (usr.value.length === 0) || (em.value.length === 0) || (pass.value.length === 0) || (c_pass.value.length === 0)) {
     event.preventDefault();
