@@ -9,7 +9,7 @@
  $titolo = mysqli_real_escape_string($conn, $_POST['title']);
  $artista = mysqli_real_escape_string($conn, $_POST['artist']);
 
- $query = "INSERT INTO preferiti VALUES($userid, '$id', '$img', '$titolo', '$artista')";
+ $query = "INSERT INTO preferiti(userid, musicid, img, titolo, artista) VALUES($userid, '$id', '$img', '$titolo', '$artista')";
  $res = mysqli_query($conn, $query) or die(mysqli_error($conn));
 
  if($res) {

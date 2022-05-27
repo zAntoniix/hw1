@@ -6,7 +6,7 @@
   $userid = mysqli_real_escape_string($conn, $_SESSION['user_id']);
   $id = mysqli_real_escape_string($conn, $_POST['id']);
 
-  $query = "DELETE FROM preferiti WHERE userid = $userid AND id = '$id'";
+  $query = "DELETE FROM preferiti WHERE userid = $userid AND musicid = '$id'";
   $res = mysqli_query($conn, $query) or die(mysqli_error($conn));
 
   if($res) {

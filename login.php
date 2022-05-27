@@ -36,6 +36,7 @@
   <head>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&display=swap" rel="stylesheet">
     <link rel='stylesheet' href='./css/login.css'>
+    <script src='./js/login.js' defer="true"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Login - Accedi</title>
   </head>
@@ -47,6 +48,7 @@
           echo "<span class='log_error'>$errore</span>";
         }        
       ?>
+      <span id="error"></span>
       <form name="login" method="post">
         <div class="username">
           <div><label for='username'>Username</label></div>

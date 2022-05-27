@@ -16,7 +16,7 @@ function onPrefJson(json) {
     artista.classList.add('artista');
     artista.textContent = artist;
     id = document.createElement('p');
-    id.textContent = json[i].id;
+    id.textContent = json[i].musicid;
     const preferito = document.createElement('a');
     preferito.setAttribute('id', 'preferito');
     preferito.innerText = "Rimuovi dai pref.";

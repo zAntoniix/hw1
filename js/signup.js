@@ -1,3 +1,20 @@
+const campi = {
+  nome: false,
+  cognome: false,
+  username: false,
+  email: false,
+  password: false,
+  c_password: false
+}
+
+function controllaCampi(event) {
+  if((nome.value.length === 0) || (cognome.value.length === 0) || (usr.value.length === 0) || (em.value.length === 0) || (pass.value.length === 0) || (c_pass.value.length === 0)) {
+    event.preventDefault();
+    document.querySelector('#error').innerHTML = "Inserisci tutti i campi";
+    document.querySelector('#error').classList.add('log_error');
+  }
+}
+
 function userJson(json) {
   if(json.esiste == true) {
     document.querySelector('.username span').textContent = "Nome utente già esistente!";
@@ -102,3 +119,5 @@ const pass = document.querySelector('.password input');
 pass.addEventListener('blur', chkPassword);
 const c_pass = document.querySelector('.conferma_password input');
 c_pass.addEventListener('blur', chkConfermaPassword);
+
+const form = document.querySelector('form').addEventListener('submit', controllaCampi);

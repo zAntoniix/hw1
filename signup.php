@@ -72,6 +72,7 @@
   <body>
     <section class="signup_form">
       <h1>Signup</h1>
+      <span id="error"></span>
       <form name="signup" method="post">
         <div class="nome">
            <div><label for='nome'>Nome</label></div>
