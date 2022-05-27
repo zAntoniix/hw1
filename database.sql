@@ -15,14 +15,15 @@ create table contents (
 ) Engine = InnoDB;
 
 create table preferiti (
+	prefid integer primary key auto_increment,
 	userid integer,
-    id varchar(255),
+    musicid varchar(255),
     img varchar(255),
     titolo varchar(255),
     artista varchar(255),
     index idx_userid(userid),
     foreign key(userid) references users(id),
-    primary key(userid, id)
+    unique(userid, musicid)
 ) Engine = InnoDB;
 
 insert into contents(titolo, img, descrizione) values ("Strumenti", "images/strumenti.png", "Disponiamo di tutti gli strumenti musicali per ogni tipo di necessità e richiesta");
