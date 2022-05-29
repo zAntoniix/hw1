@@ -126,7 +126,7 @@ section {
   color: white;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 125px;
+  margin-bottom: 50px;
   width: 60%;
   text-align: center;
 }
@@ -156,6 +156,56 @@ section {
 
 #dettagli p {
   color: white;
+}
+
+#inEvidenza {
+  background-color: rgb(233, 181, 10);
+  color: white;
+  text-align: center;
+}
+
+#inEvidenza h1 {
+  padding-top: 15px;
+}
+
+#inEvidenza-view {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#inEvidenza-view .song {
+  margin: 10px;
+  border: 1px solid black;
+  padding: 5px;
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.song p {
+  display: none;
+}
+
+.song a {
+  cursor: pointer;
+  margin-top: 3px;
+  font-size: 0.8rem;
+  border: 1px solid black;
+  background-color: white;
+  color: black;
+}
+
+.added {
+  color: rgb(233, 181, 10) !important;
+  background-color: black !important;
+  cursor: default !important
+}
+
+.song a:hover {
+  color: rgb(233, 181, 10);
+  background-color: black;
 }
 
 footer {

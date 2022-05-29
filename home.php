@@ -54,7 +54,7 @@
       </div>
 
       <div id="dettagli">
-        <!--<div>
+        <!-- <div>
           <img src="images/strumenti.png" />
           <h1>Strumenti</h1>
           <p>Disponiamo di tutti gli strumenti musicali per ogni tipo di necessità e richiesta</p>
@@ -71,6 +71,11 @@
            <h1>Consulenza</h1>
           <p>Ti aiuteremo nella scelta delle opzioni milgiori per valorizzare e migliorare il tuo prodotto</p>
          </div> -->
+      </div>
+
+      <div id=inEvidenza>
+        <h1>Brani in evidenza questo mese</h1>
+        <div id="inEvidenza-view"></div>
       </div>
     </section>
 

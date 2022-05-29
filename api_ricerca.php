@@ -32,7 +32,7 @@
   for($i=0;$i < count($json1['tracks']['items']);$i++) {
     $id = $json1['tracks']['items'][$i]['id'];
 
-    $query = "SELECT * FROM preferiti where userid = $userid AND musicid = '$id'";
+    $query = "SELECT * FROM preferiti WHERE userid = $userid AND musicid = '$id'";
     $res2 = mysqli_query($conn, $query);
 
     if(mysqli_num_rows($res2) > 0) {
